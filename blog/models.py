@@ -7,11 +7,17 @@ class Post(db.Model):
     pub_date = db.Column(db.DateTime, nullable=False,
                          default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
-    category_id = db.Column(db.Integer)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
+    category = db.relationship('Category', backref='post', lazy=True)
 
 
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
+
+class Links(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    site = db.Column(db.String(50), nullable=False)
+    url = db.Column(db.String(200), nullable=False)
 
 
