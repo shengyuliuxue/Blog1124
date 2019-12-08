@@ -2,9 +2,9 @@
 # -*- coding:utf-8 -*-
 
 from flask import Blueprint
-bp = Blueprint('admin', __name__, url_prefix='/admin')
+admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
-@bp.route('/hello')
+@admin_bp.route('/hello')
 def hello():
     return "hello shengyu"
 
