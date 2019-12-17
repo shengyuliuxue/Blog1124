@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}shengyu{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .import{ color: red; }
+    </style>
+{% endblock %}
+{% block content %}
+{{super()}}
+<h1>Index</h1>
+<p class="imortant">
+    Welcome to my awesome homepage.
+</p>
+{% endblock %}
+
+{% block incontent%} <div > shengyu incontent</div> {% endblock%}
