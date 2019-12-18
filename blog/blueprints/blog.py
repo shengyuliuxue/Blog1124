@@ -6,5 +6,5 @@ blog_bp = Blueprint('blog', __name__)
 
 @blog_bp.route('/')
 def index():
-    return render_template('child.html')
+    return render_template('base.html')
 

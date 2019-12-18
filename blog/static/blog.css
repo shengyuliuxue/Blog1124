@@ -1,0 +1,8 @@
+.header {
+    background:red;
+
+}
+
+.navigation ul {
+    display:flex;
+}
