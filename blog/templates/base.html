@@ -12,6 +12,12 @@
        <div class="content">
            {% block content %}
            {% endblock %}
+           <div>
+        {% for post in posts %}
+            <div>post.title</div>
+            <div>post.content</div>
+        {% endfor %}
+</div>
        </div>
        <footer>
            {% block footer %}
