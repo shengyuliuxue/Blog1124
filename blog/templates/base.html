@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Shengyu Blog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}" type="text/css">
-    <title>blog</title>
 </head>
 <body>
-     <div class="header">
+ <div class="header">
      {% include 'header.html' %}
      </div>
        <div class="content">
            {% block content %}
            {% endblock %}
+           <div>
+               {% block posts %}{% endblock %}
+           </div>
        </div>
        <footer>
            {% block footer %}

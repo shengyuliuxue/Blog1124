@@ -3,6 +3,31 @@
 
 }
 
+
 .navigation ul {
     display:flex;
+
 }
+
+.navigation li{
+    list-style:none;
+
+}
+
+.posts{
+    background:yellow;
+    width:66%;
+}
+
+.content{
+    display:flex
+}
+
+.posts_in .postTitle{
+    background:yellow
+}
+
+.posts_in .postContent{
+    background:green
+}
+
