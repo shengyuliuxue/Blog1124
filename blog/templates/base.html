@@ -12,8 +12,14 @@
        <div class="content">
            {% block content %}
            {% endblock %}
-           <div>
+           <div class="posts">
                {% block posts %}{% endblock %}
+           </div>
+           <div class="links">
+                {% include 'links.html' %}
+           </div>
+           <div class="category">
+               {% include 'category.html' %}
            </div>
        </div>
        <footer>

@@ -1,8 +1,11 @@
 .header {
-    background:red;
-
+    background:#2780E3;
+    height:50px;
 }
 
+.navbar-brand {
+color: #fff;
+}
 
 .navigation ul {
     display:flex;
