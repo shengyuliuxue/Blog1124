@@ -9,17 +9,26 @@
  <div class="header">
      {% include 'header.html' %}
      </div>
-       <div class="content">
+ <div class='page-header'>
+               <h1>Bluelog</h1>
+               <h4>No, I'm the real thing.</h4>
+           </div>
+ <div class="content">
            {% block content %}
            {% endblock %}
-           <div class="posts">
-               {% block posts %}{% endblock %}
+
+           <div class="main-left">
+                <div class="posts">
+                    {% block posts %}{% endblock %}
+                </div>
            </div>
-           <div class="links">
-                {% include 'links.html' %}
-           </div>
-           <div class="category">
-               {% include 'category.html' %}
+           <div class="main-right">
+                <div class="links">
+                        {% include 'links.html' %}
+                 </div>
+                 <div class="category">
+                    {% include 'category.html' %}
+                 </div>
            </div>
        </div>
        <footer>

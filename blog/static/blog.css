@@ -1,10 +1,11 @@
 .header {
     background:#2780E3;
     height:50px;
+    margin-bottom:20px;
 }
 
 .navbar-brand {
-color: #fff;
+color:#fff
 }
 
 .navigation ul {
@@ -17,20 +18,35 @@ color: #fff;
 
 }
 
-.posts{
+.main-left{
     background:yellow;
     width:66%;
 }
 
 .content{
-    display:flex
+    display:flex;
 }
 
 .posts_in .postTitle{
-    background:yellow
+    background:yellow;
 }
 
 .posts_in .postContent{
-    background:green
+    background:green;
 }
 
+a{
+    text-decoration: none;
+}
+
+.navigation ul li{
+    margin-right:16px;
+}
+
+.page-header h1{
+    font-weight:300;
+}
+
+.page-header h4{
+    color:#868e96;
+}
