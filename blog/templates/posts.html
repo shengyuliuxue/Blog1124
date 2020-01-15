@@ -1,9 +1,15 @@
 {% extends "base.html" %}
+{% block pageheader %}
+
+    <h1>Bluelog</h1>
+    <h4>No,I'm the real thing.</h4>
+
+{% endblock %}
 {% block posts %}
 <div class="posts_in">
 {% for post in posts %}
     <div class="postTitle">{{ post.title }}</div>
-    <div class="postContent">{{ post.content }}</div>
+    <div class="postContent">{{ post.content | truncate(200)|safe }}</div>
 {% endfor %}
 </div>
 <div class="page">
