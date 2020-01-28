@@ -50,3 +50,13 @@ a{
 .page-header h4{
     color:#868e96;
 }
+
+.loginform {
+    background: #00ffdc;
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,6 +1,7 @@
 from blog.db import db
 from datetime import datetime
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 import  blog
 
 class Post(db.Model):
@@ -25,8 +26,14 @@ class Links(db.Model):
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), unique=True, index=True)
-    password = db.Column(db.String(128))
+    username = db.Column(db.String(128), unique=True, index=True)
+    password_hash = db.Column(db.String(128))
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def validate_password(self, password):
+        return check_password_hash(self.password_hash, password)
 
 @blog.login_manager.user_loader
 def load_user(user_id):

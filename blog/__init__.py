@@ -9,7 +9,7 @@ from blog.blueprints.blog import blog_bp
 from blog.db import db
 from blog.config import Config
 from blog.models import Links, Category
-
+import click
 
 
 
@@ -32,6 +32,14 @@ def register_template_context(app):
         return dict(links=links, categories=categories)
 
 myapp = create_app()
+
+#def register_commands(app):
+#    @app.cli.command()
+#    @click.option('--username', help="input username")
+#    @click.option('--password', help='input password')
+#    def inituser(username, password):
+#        """Building Bluelog, just for you."""
+#        click.echo('Initializing the database...')
 
 
 

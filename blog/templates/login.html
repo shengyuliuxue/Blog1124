@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>Shengyu Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}" type="text/css">
 </head>
+
 <body>
-    <form>
+    <div class="loginform">
+        <form method="post">
         <div >
             {{ form.name.label }}
             {{ form.name() }}
@@ -15,7 +19,8 @@
             {{ form.password }}
         </div>
             {{ form.remember_me }}
-        {{ form.submit() }}
-    </form>
+            {{ form.submit() }}
+        </form>
+    </div>
 </body>
 </html>
